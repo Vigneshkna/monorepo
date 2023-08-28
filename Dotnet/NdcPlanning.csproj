@@ -1,0 +1,441 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5A8A9F53-2E22-4B7A-B000-8191A02EE114}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NdcPlanning</RootNamespace>
+    <AssemblyName>NdcPlanning</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.3.1.7705, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper, Version=1.40.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Dapper.1.42\lib\net40\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="MiniProfiler, Version=3.1.1.140, Culture=neutral, PublicKeyToken=b44f9351044011a3, processorArchitecture=MSIL">
+      <HintPath>packages\MiniProfiler.3.1.1.140\lib\net40\MiniProfiler.dll</HintPath>
+    </Reference>
+    <Reference Include="MiniProfiler.Mvc, Version=3.0.11.0, Culture=neutral, PublicKeyToken=b44f9351044011a3, processorArchitecture=MSIL">
+      <HintPath>packages\MiniProfiler.MVC4.3.0.11\lib\net40\MiniProfiler.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Moq, Version=4.2.1409.1722, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
+      <HintPath>packages\Moq.4.2.1409.1722\lib\net40\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.Mvc.4.0.40804.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.Providers.Core.1.1\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebGrease, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\WebGrease.1.1.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\INdcPlanningRepository.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\CrossdockMatrixController.cs" />
+    <Compile Include="Controllers\CrossdockPlanViewV2Controller.cs" />
+    <Compile Include="Controllers\CrossdockPlanViewController.cs" />
+    <Compile Include="Controllers\NDCActualViewController.cs" />
+    <Compile Include="Controllers\PickDCTrunkingPlanController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\DetailsController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\NDCDate.cs" />
+    <Compile Include="ModelBuilder\CrossdockMatrix.cs" />
+    <Compile Include="ModelBuilder\CrossdockPlanViewV2.cs" />
+    <Compile Include="ModelBuilder\CrossdockPlanView.cs" />
+    <Compile Include="ModelBuilder\NDCActualView.cs" />
+    <Compile Include="ModelBuilder\PickDCTrunkingTrailerPlan.cs" />
+    <Compile Include="ModelBuilder\PlannedTrailerMovementWithTransport.cs" />
+    <Compile Include="ModelBuilder\SlotWithDetails.cs" />
+    <Compile Include="Models\BoxedHangingSinglesUrnFill.cs" />
+    <Compile Include="Models\BoxedHangingFill.cs" />
+    <Compile Include="Models\CrossdockMatrix\All.cs" />
+    <Compile Include="Models\CrossdockMatrix\InboundTrailer.cs" />
+    <Compile Include="Models\CrossdockMatrix\Metrics.cs" />
+    <Compile Include="Models\CrossdockMatrix\OutboundTrailer.cs" />
+    <Compile Include="Models\CrossdockPlanViewV2\All.cs" />
+    <Compile Include="Models\CrossdockPlanViewV2\TrunkSlot.cs" />
+    <Compile Include="Models\CrossdockPlanViewV2\StoreSlot.cs" />
+    <Compile Include="Models\CrossdockPlanView\TrailerTimings.cs" />
+    <Compile Include="Models\NDCActualView\All.cs" />
+    <Compile Include="Models\NDCActualView\HeaderOptions.cs" />
+    <Compile Include="Models\NDCActualView\Store.cs" />
+    <Compile Include="Models\NDCActualView\Trailer.cs" />
+    <Compile Include="Models\ChangeTrailerModel.cs" />
+    <Compile Include="Models\ReasonCodeAndTextModel.cs" />
+    <Compile Include="Models\BoxedHangingUrns.cs" />
+    <Compile Include="Models\CrossdockPlanView\HeaderOptions.cs" />
+    <Compile Include="Models\CrossdockPlanView\All.cs" />
+    <Compile Include="Models\BoxedHangingSingles.cs" />
+    <Compile Include="Models\CrossdockPlanView\OutboundInfo.cs" />
+    <Compile Include="Models\CrossdockPlanView\Store.cs" />
+    <Compile Include="Models\CrossdockPlanView\OutboundForInbound.cs" />
+    <Compile Include="Models\CrossdockPlanView\Inbound.cs" />
+    <Compile Include="Models\TrunkPlan\All.cs" />
+    <Compile Include="Models\TrunkPlan\StoreXTrailer.cs" />
+    <Compile Include="Models\TrunkPlan\Store.cs" />
+    <Compile Include="Models\TrunkPlan\StoreXTrailerOrderDate.cs" />
+    <Compile Include="Models\TrunkPlan\StoreXTrailerOrderDateDepartment.cs" />
+    <Compile Include="Models\TrunkPlan\Trailer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\CrossDockMatrix.css" />
+    <Content Include="Content\css\mands.css" />
+    <Content Include="Content\css\superfish.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\img\dhl-reflect-image.png" />
+    <Content Include="Content\img\DHL_SC_4rgb.jpg" />
+    <Content Include="Content\img\footer02.png" />
+    <Content Include="Content\img\header-img-top.png" />
+    <Content Include="Content\img\mns_logo_black.png" />
+    <Content Include="Content\img\ms-reflect.png" />
+    <Content Include="Content\img\navigation.png" />
+    <Content Include="Content\themes\base\accordion.css" />
+    <Content Include="Content\themes\base\all.css" />
+    <Content Include="Content\themes\base\autocomplete.css" />
+    <Content Include="Content\themes\base\base.css" />
+    <Content Include="Content\themes\base\button.css" />
+    <Content Include="Content\themes\base\core.css" />
+    <Content Include="Content\themes\base\datepicker.css" />
+    <Content Include="Content\themes\base\dialog.css" />
+    <Content Include="Content\themes\base\draggable.css" />
+    <Content Include="Content\themes\base\images\animated-overlay.gif" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\menu.css" />
+    <Content Include="Content\themes\base\progressbar.css" />
+    <Content Include="Content\themes\base\resizable.css" />
+    <Content Include="Content\themes\base\selectable.css" />
+    <Content Include="Content\themes\base\selectmenu.css" />
+    <Content Include="Content\themes\base\slider.css" />
+    <Content Include="Content\themes\base\sortable.css" />
+    <Content Include="Content\themes\base\spinner.css" />
+    <Content Include="Content\themes\base\tabs.css" />
+    <Content Include="Content\themes\base\theme.css" />
+    <Content Include="Content\themes\base\tooltip.css" />
+    <Content Include="css\font-awesome.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\img\ui-bg_gloss-wave_70_00000d_500x100.png" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\CrossDockMatrix.js" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Scripts\jquery-1.11.0.intellisense.js" />
+    <Content Include="Scripts\custom.js" />
+    <Content Include="Scripts\jquery-1.11.0.js" />
+    <Content Include="Scripts\jquery-1.11.0.min.js" />
+    <Content Include="Scripts\jquery-ui-1.11.0.js" />
+    <Content Include="Scripts\jquery-ui-1.11.0.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\knockout-2.1.0.debug.js" />
+    <Content Include="Scripts\knockout-2.1.0.js" />
+    <Content Include="Scripts\menu.js" />
+    <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Sql\Autoapprove_sbs_emergency_slots.sql" />
+    <Content Include="Sql\GetPickSiteId.sql" />
+    <Content Include="Sql\GetSchedulerDate.sql" />
+    <Content Include="Sql\GetStoreMandSCode.sql" />
+    <!-- Temporary commented this line as ProcessSchedulerData.sql file is missing DHL shared solution  -->
+    <!-- <Content Include="Sql\ProcessSchedulerData.sql" /> -->
+    <Content Include="Sql\UpdateStoreorderlineRpeByOrderDate.sql" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Scripts\jquery-1.11.0.min.map" />
+    <Content Include="Views\CrossdockPlanViewV2\SummaryView.cshtml" />
+    <Content Include="Views\CrossdockPlanViewV2\_TrunkSlot.cshtml" />
+    <Content Include="Views\CrossdockPlanViewV2\_TrunkSlotDetailsView.cshtml" />
+    <Content Include="Views\CrossdockPlanViewV2\_StoreSlot.cshtml" />
+    <Content Include="Views\CrossdockPlanViewV2\_StoreSlotDetailsView.cshtml" />
+    <Content Include="Views\CrossdockPlanViewV2\ReasonCodeEdit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\PickDCTrunkingPlan\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\PickDCTrunkingPlan\_Store.cshtml" />
+    <Content Include="Views\PickDCTrunkingPlan\_Header.cshtml" />
+    <Content Include="Views\PickDCTrunkingPlan\_Trailer.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\DateOnly.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\FillPercentage.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\DayTime.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\JourneyReference.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\Singles.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\Urns.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\HoursMins.cshtml" />
+    <Content Include="Views\PickDCTrunkingPlan\_Footer.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Mis\Core\Mis.Core.csproj">
+      <Project>{ad5accd2-6ea6-4afc-b1cf-66208607a003}</Project>
+      <Name>Mis.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mis\Model\Mis.Model.csproj">
+      <Project>{2f376cb4-5dcf-40c4-8ed2-47921e6c0dd4}</Project>
+      <Name>Mis.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mis\SecurityModel\SecurityModel.csproj">
+      <Project>{0D268E3D-7AE7-4B73-89DE-F8A0F1CD0085}</Project>
+      <Name>SecurityModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mis\Web\Mis.Ui.csproj">
+      <Project>{643E92C0-6ED4-4EE1-A62C-77D8509E8482}</Project>
+      <Name>Mis.Ui</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\ReasonCodeAndTextEdit.cshtml" />
+    <Content Include="Views\PickDCTrunkingPlan\_StoreXTrailer.cshtml" />
+    <Content Include="Views\PickDCTrunkingPlan\_StoreOrderDateDepartment.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\StoreName.cshtml" />
+    <Content Include="Views\CrossdockPlanView\_Footer.cshtml" />
+    <Content Include="Views\CrossdockPlanView\_Header.cshtml" />
+    <Content Include="Views\CrossdockPlanView\_Inbound.cshtml" />
+    <Content Include="Views\CrossdockPlanView\_Outbound.cshtml" />
+    <Content Include="Views\CrossdockPlanView\_Store.cshtml" />
+    <Content Include="Views\CrossdockPlanView\Narrow.cshtml" />
+    <Content Include="Views\CrossdockPlanView\OutboundOnly.cshtml" />
+    <Content Include="Views\CrossdockPlanView\Wide.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\PassedBy.cshtml" />
+    <Content Include="Views\CrossdockMatrix\Index.cshtml" />
+    <Content Include="Views\CrossdockMatrix\_Inbound.cshtml" />
+    <Content Include="Views\CrossdockMatrix\_Outbound.cshtml" />
+    <Content Include="Views\CrossdockMatrix\_Header.cshtml" />
+    <Content Include="Views\CrossdockMatrix\DisplayTemplates\HoursMins.cshtml" />
+    <Content Include="Views\CrossdockMatrix\_VerticalText.cshtml" />
+    <Content Include="Views\NDCActualView\Index.cshtml" />
+    <Content Include="Views\NDCActualView\_Footer.cshtml" />
+    <Content Include="Views\NDCActualView\_Header.cshtml" />
+    <Content Include="Views\NDCActualView\_Store.cshtml" />
+    <Content Include="Views\NDCActualView\_Trailer.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\TrailerTimings.cshtml" />
+    <Content Include="Views\Home\Versions.cshtml" />
+    <Content Include="Views\PickDCTrunkingPlan\ChangeTrailer.cshtml" />
+    <Content Include="Views\CrossdockMatrix\_BoxedHanging.cshtml" />
+    <Content Include="Views\CrossdockPlanView\_InboundNarrow.cshtml" />
+    <Content Include="Views\Details\Urns.cshtml" />
+    <Content Include="Views\Details\_UrnRef.cshtml" />
+    <Content Include="Views\Details\UrnEvents.cshtml" />
+    <Content Include="Views\Details\StoreOrders.cshtml" />
+    <Content Include="Views\Details\_StoreOrderLinesSummary.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\TrailerCode.cshtml" />
+    <Content Include="Views\Details\UrnsAbbreviated.cshtml" />
+    <Content Include="Views\Details\_SlotOrTrailer.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\PassedByAmount.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\Time.cshtml" />
+    <Content Include="Views\Shared\ReasonCodeAndTextEditAjax.cshtml" />
+    <Content Include="Views\Shared\_LayoutPlain.cshtml" />
+    <Content Include="Views\Details\FeedLatest.cshtml" />
+    <Content Include="Views\Details\_Urn.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\Percentage.cshtml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51555</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://10.126.8.8:446/XDPR</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="packages\OctoPack.3.6.3\build\OctoPack.targets" Condition="Exists('packages\OctoPack.3.6.3\build\OctoPack.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\OctoPack.3.6.3\build\OctoPack.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\OctoPack.3.6.3\build\OctoPack.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
