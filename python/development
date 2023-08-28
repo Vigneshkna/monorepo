@@ -1,0 +1,21 @@
+#! /bin/bash
+
+export FLASK_APP=skf/app.py
+export PYTHONPATH=.
+export SKF_FLASK_DEBUG='True'
+export SKF_JWT='False'
+export SKF_JWT_SECRET='this_is_a_TEST_secret'
+#export PATH=$PATH:/usr/local/opt/rabbitmq/sbin
+python3 skf/app.py 
+
+while :
+do
+	case "$(ps x |grep -v grep |grep -c "Python skf")" in
+
+	0)  echo "Restarting skf:"
+	    python3 skf/app.py 
+	    ;;
+	2)  echo "SKF already running"
+	    ;;
+	esac
+done
